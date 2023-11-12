@@ -1,0 +1,11 @@
+-- sql_invoicing database 
+-- joins table of clients, payments and payment_methods
+
+USE sql_invoicing;
+SELECT *
+FROM clients c 
+JOIN payments p  
+	ON c.client_id = p.client_id
+JOIN payment_methods pm
+	ON p.payment_id = pm.payment_method_id
+-- result presenting whole table join
